@@ -1,0 +1,30 @@
+{
+    "name": "jarming/request-param-bundle",
+    "description": "request param annotation",
+    "keywords": ["request", "param", "request-param"],
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jarming",
+            "homepage": "https://github.com/SwotAtmk"
+        }
+    ],
+    "require": {
+        "symfony/framework-bundle": "^4.3 || ^5.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.2",
+        "symfony/phpunit-bridge": "^4.3 || ^5.0",
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "psr-4": { "Nelmio\\CorsBundle\\": "" },
+        "exclude-from-classmap": ["/Tests/"]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
+        }
+    }
+}

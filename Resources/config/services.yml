@@ -1,0 +1,11 @@
+services:
+  app.argument_resolver.request_params:
+    class: jarming\RequestParamsBundle\ArgumentResolver\RequestParamsValueResolver
+    tags:
+      - { name: controller.argument_value_resolver, priority: 100 }
+  app.request_param_validator.listener:
+    class: jarming\RequestParamsBundle\EventListener\RequestParamValidatorListener
+    tags:
+      - { name: kernel.event_subscriber }
+    arguments:
+      [ '@argument_metadata_factory' ]
